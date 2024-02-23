@@ -12,10 +12,10 @@ app.use(express.static("views"));
 app.use(methodOverride('_method'));
 
 const db = new pg.Client({
-  user: "benti",
-  host: "localhost",
-  database: "library",
-  password: "123456",
+  user: "xxx",
+  host: "xxx",
+  database: "xxx",
+  password: "xxx",
   port: 5432,
 });
 
