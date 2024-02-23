@@ -1,0 +1,45 @@
+.add{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 1px;
+}
+.books{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+    margin-bottom: 2px;
+}
+
+#bookInfo{
+    margin-left: 10px;
+}
+
+#bookRating{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#coverTitle{
+    display: flex;
+}
+
+#starsRating{
+    display: flex;
+}
+
+fieldset{
+    width: 200px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+#delete{
+    align-self: end;
+}

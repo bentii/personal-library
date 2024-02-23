@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="insert">
+        <form action="/add" method="post" class="add">
+            <label for="bookTitle">Title:</label>
+            <input type="text" name="bookTitle" id="bookTitle" class="bookTitle" placeholder="Senhor dos anais..">
+            <label for="bookRating">Rating:</label>
+            <select name="bookRating" id="bookRating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="bookNotes">Notes:</label>
+            <textarea name="bookNotes" id="bookNotes" cols="30" rows="5" placeholder="I love this part..."></textarea>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+    <% books.forEach((book) => { %>
+        <div class="books">
+            <div id="coverTitle">
+            <img src="<%=book.imgurl%>" alt="<%=book.title%>" id="bookCover" >
+            <div id="bookInfo">
+            <h1><%=book.title%></h1>
+            <%book.authors.forEach((author) => { %>
+                <p><%=author%></p>
+            <% }) %>
+        </div>
+    </div>
+    <div id="starsRating">
+        <div id="bookRating">
+            <p>Stars:</p> <h2><%=book.rating %></h2>
+        </div>
+            <div id="bookNotes">
+                <fieldset>
+                <legend>Notes:</legend>
+            <p><%=book.notes %></p>
+        </fieldset>
+        </div>
+        <div id="delete">
+            <form method="POST" action="/delete?_method=DELETE">
+                <input type="hidden" name="bookId" value="<%= book.id %>">
+                <button type="submit">Delete</button>
+              </form>
+        </div>
+        </div>
+    </div>
+    <% }) %>    
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Library",
+            "database": "library",
+            "username": "benti",
+            "password": "123456"
+        }
+    ]
+}
